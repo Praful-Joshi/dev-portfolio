@@ -5,14 +5,14 @@ import Hero from "./Hero";
 import Education from "./Education";
 import SkillsAndExperience from "./SkillsAndExperience";
 import Projects from "./Projects";
-import OpenSource from "./OpenSource";
-import ExtraCurricular from "./ExtraCurricular";
+// import OpenSource from "./OpenSource";
+// import ExtraCurricular from "./ExtraCurricular";
 import Footer from "./Footer";
 import Button from "./Button";
-import Stats from "./Stats";
+// import Stats from "./Stats";
 import Loading from "./Loading";
-import BlogPosts from "./BlogPosts";
-import Achievements from "./Achievements";
+// import BlogPosts from "./BlogPosts";
+// import Achievements from "./Achievements";
 
 
 export {
@@ -21,12 +21,12 @@ export {
     Education,
     SkillsAndExperience,
     Projects,
-    OpenSource,
-    ExtraCurricular,
+    // OpenSource,
+    // ExtraCurricular,
     Footer,
     Button,
-    Stats,
+    // Stats,
     Loading,
-    BlogPosts,
-    Achievements,
+    // BlogPosts,
+    // Achievements,
 };

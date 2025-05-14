@@ -16,7 +16,7 @@ const Footer = () => (
           {aboutMe.name}
         </h2>
         <p
-          className={`font-poppins font-normal text-dimWhite text-[16px] leading-[30.8px] max-w-[470px] mt-5`}
+          className={`font-poppins font-normal text-dimWhite text-[16px] leading-[30.8px] max-w-[470px] mt-2`}
         >
         {aboutMe.tagLine}
         </p>
@@ -42,7 +42,7 @@ const Footer = () => (
           <a href={repoLink} target="_blank">
             <Button
               styles="mt-10 inline-flex items-center justify-center"
-              text="Star"
+              text="Github"
               icon={AiFillGithub}
             />
           </a>
@@ -52,14 +52,14 @@ const Footer = () => (
       <div className="md:ml-auto mt-10 md:mt-0">
         <img
           src={profilePic}
-          alt="Parth Mittal"
+          alt="Praful Joshi"
           className="w-[200px] h-[200px] border-2 border-teal-200 relative z-[5] rounded-full"
         />
       </div>
     </div>
     <div className="text-center font-poppins font-normal text-dimWhite text-xs sm:text-sm pb-4">
       <p>
-        Made with 💙 by Parth Mittal & the Open Source Community
+        Made using <a href="https://github.com/mittal-parth/personal-portfolio" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-blue-400 transition duration-300">this</a> template.
       </p>
     </div>
   </footer>

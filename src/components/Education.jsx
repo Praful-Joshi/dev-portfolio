@@ -57,7 +57,7 @@ const FeatureCard = ({
 const Education = () => {
   return (
     <section id="education">
-      <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
+      <h1 className="flex-1 md:-mb-16 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
         Education
       </h1>
       <motion.div

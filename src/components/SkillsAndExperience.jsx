@@ -27,7 +27,7 @@ const SkillCard = (props) => {
           {props.title}
         </h4>
       </div>
-      <div className="grid grid-cols-3 gap-8 ml-8">
+      <div className="grid grid-cols-4 md:grid-cols-4 gap-8 ml-8">
         {props.items.map((item, index) => (
           <SkillIcon key={item.id} index={index} {...item} />
         ))}
@@ -101,8 +101,8 @@ const ExperienceCard = (props) => {
 const SkillsAndExperience = () => {
   return (
     <section id="skills" className="mb-12">
-      <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
-        Skills & Experience
+      <h1 className="flex-1 md:-mb-8 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
+        Work I've Done
       </h1>
       <div
         className={layout.section}
@@ -110,14 +110,14 @@ const SkillsAndExperience = () => {
         // transition={{ duration: 0.5 }}
       >
         {/* Skills */}
-        <motion.div className={`ml-2 mb-6 ${layout.sectionInfo}`}>
+        <motion.div className={`ml-2 mb-6 md:-mt-20 ${layout.sectionInfo}`}>
           {skills.map((skill, index) => (
             <SkillCard key={index} index={index} {...skill} />
           ))}
         </motion.div>
 
         {/* Experience */}
-        <motion.div className="flex flex-1 items-center justify-start flex-col">
+        <motion.div className="flex flex-1 md:ml-10 items-center justify-start flex-col">
           {experiences.map((exp, index) => (
             <ExperienceCard key={index} index={index} {...exp} />
           ))}

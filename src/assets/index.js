@@ -1,9 +1,9 @@
-import parthmittal from "./parth.svg";
+import prafulLogo from "./praful.svg";
 import profilePic from "./profile-pic.jpg";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import arrowUp from "./arrow-up.svg";
-import nitk from "./nitk.png";
+import sppuLogo from "./sppuLogo.png";
 import cluboard from "./cluboard.png";
 import cash_flow from "./cash_flow.jpg";
 import ecell from "./ecell.png";
@@ -11,17 +11,18 @@ import gdsc from "./gdsc.png";
 import iris from "./iris.png";
 import genesis from "./genesis.jpg";
 import portfolio from "./portfolio.jpg";
-import cdc from "./cdc.png";
-import chargeswap from "./chargeswap.png";
-import placeicon from "./place-icon.svg";
-import recruitment from "./recruitment.png";
+import minesweeperLogo from "./minesweeperLogo.jpg";
+import battleTanksGIF from "./battleTanksGIF.gif";
+import fluidSimGIF from "./fluidSimGIF.gif";
+import chestSysGIF from "./chestSysGIF.gif";
 import huntly from "./huntly.png";
 import oracle from "./oracle.jpg";
-import comicify_ai from "./comicify-ai.png";
-import greentrust from "./green_trust.png";
-import averlon from "./averlon.jpg";
+import gameEngineGIF from "./gameEngineGIF.gif";
+import xinuLogo from "./xinuLogo.jpg";
+import mlympixLogo from "./mlympixLogo.png";
+import accentureLogo from "./accentureLogo.jpeg";
 import devfolio from "./devfolio.png";
-import pba from "./pba_logo.jpeg";
+import ncsuLogo from "./ncsuLogo.png";
 import ethglobal from "./ethglobal.png";
 import polkadot from "./polkadot.jpeg";
 import lightspeed from "./lightspeed.png";
@@ -36,7 +37,7 @@ export {
   menu,
   close,
   arrowUp,
-  nitk,
+  sppuLogo,
   cluboard,
   cash_flow,
   gdsc,
@@ -44,19 +45,20 @@ export {
   ecell,
   genesis,
   portfolio,
-  cdc,
-  parthmittal,
+  minesweeperLogo,
+  prafulLogo,
   profilePic,
-  chargeswap,
-  placeicon,
-  recruitment,
+  battleTanksGIF,
+  fluidSimGIF,
+  chestSysGIF,
   huntly,
   oracle,
-  comicify_ai,
-  greentrust,
-  averlon,
+  gameEngineGIF,
+  xinuLogo,
+  mlympixLogo,
+  accentureLogo,
   devfolio,
-  pba,
+  ncsuLogo,
   ethglobal,
   polkadot,
   lightspeed,

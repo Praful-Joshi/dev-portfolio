@@ -4,70 +4,50 @@ import { AiFillGithub } from "react-icons/ai";
 import { BsLink45Deg } from "react-icons/bs";
 import { motion } from "framer-motion";
 
-const Project = (props) => {
+const Project = ({ project, openModal }) => {
   return (
     <motion.div
-      className="px-12 py-8 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card"
+      className="transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card p-6 cursor-pointer"
       initial={{ y: -30, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: false, amount: 0.5 }}
       transition={{ duration: 0.75, delay: 0.1 }}
+      onClick={() => openModal(project)}
     >
-      <div className="flex flex-col sm:-mx-4 sm:flex-row">
-        <img
-          className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300"
-          src={props.image}
-          alt=""
-        />
-
-        <div className="mt-4 sm:mx-4 sm:mt-0">
-          <h1 className="text-xl font-semibold font-poppins text-gray-700 capitalize md:text-2xl group-hover:text-white text-gradient">
-            {props.title}
-          </h1>
-          <p className="font-poppins font-normal text-dimWhite mt-3">
-            Tech Stack
-          </p>
-          <div className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
-            <div className="flex sm:flex-row">
-              {props.stack.map((tech, index) => (
-                <div
-                  key={tech.id}
-                  index={index}
-                  className="text-dimWhite mr-5 text-[20px] hover:text-teal-200 tooltip"
-                >
-                  {React.createElement(tech.icon)}
-                  <span className="tooltiptext">{tech.name}</span>
-                </div>
-              ))}
+      <div className="flex items-center justify-between mb-2">
+        <h1 className="text-lg font-semibold text-white">{project.title}</h1>
+        <div className="flex flex-row">
+          {project.stack.map((tech) => (
+            <div key={tech.id} className="text-dimWhite mr-2 text-[20px] hover:text-teal-200 tooltip">
+              {React.createElement(tech.icon)}
+              <span className="tooltiptext">{tech.name}</span>
             </div>
-          </div>
+          ))}
         </div>
       </div>
 
-      <p className="mt-8 text-gray-500 dark:text-gray-300 group-hover:text-gray-300 font-poppins">
-        {props.content}
-      </p>
+      {project.image ? (
+        <img
+          className="max-w-full h-auto max-h-60 mx-auto rounded-md mt-4"
+          src={project.image}
+          alt="Project Media"
+        />
+      ) : (
+        <p className="mt-8 text-gray-500 dark:text-gray-300 group-hover:text-gray-300 font-poppins">
+          {project.content}
+        </p>
+      )}
 
-      <div className="flex mt-4 -mx-2">
-        {props.github ? (
-          <a href={props.github} target="_blank">
-            <AiFillGithub
-              size="2rem"
-              className="text-white mr-1 hover:text-teal-200"
-            />
+      <div className="flex mt-4">
+        {project.github && (
+          <a href={project.github} target="_blank" rel="noopener noreferrer">
+            <AiFillGithub size="2rem" className="text-white mr-2 hover:text-teal-200" />
           </a>
-        ) : (
-          ""
         )}
-        {props.link ? (
-          <a href={props.link} target="_blank">
-            <BsLink45Deg
-              size="2rem"
-              className="text-white hover:text-teal-200"
-            ></BsLink45Deg>
+        {project.link && (
+          <a href={project.link} target="_blank" rel="noopener noreferrer">
+            <BsLink45Deg size="2rem" className="text-white hover:text-teal-200" />
           </a>
-        ) : (
-          ""
         )}
       </div>
     </motion.div>
@@ -75,19 +55,66 @@ const Project = (props) => {
 };
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = React.useState(null);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
+  React.useEffect(() => {
+    const handleEsc = (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    };
+
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
   return (
     <section id="projects">
-      <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
-        Projects
+      <h1 className="flex-1 -mb-4 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
+        Stuff I've Built
       </h1>
 
       <div className="container px-2 py-10 mx-auto mb-8">
-        <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-          {projects.map((project, index) => (
-            <Project key={project.id} index={index} {...project} />
+        <div className="grid grid-cols-1 gap-8 mt-4 md:mt-4 md:grid-cols-2">
+          {projects.map((project) => (
+            <Project key={project.id} project={project} openModal={openModal} />
           ))}
         </div>
       </div>
+
+      {selectedProject && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="bg-primary py-10 px-10 rounded-xl w-full max-w-lg mx-auto relative">
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-white text-2xl hover:text-red-400"
+            >
+              ✖
+            </button>
+            {selectedProject.image && (
+              <img
+                src={selectedProject.image}
+                alt="Project GIF"
+                className="rounded-md mb-4 w-full h-48 object-contain"
+              />
+            )}
+            <h2 className="text-white text-2xl font-bold mb-4 text-center px-0">
+              {selectedProject.title}
+            </h2>
+            <p className="text-dimWhite text-sm px-2">
+              {selectedProject.content}
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
