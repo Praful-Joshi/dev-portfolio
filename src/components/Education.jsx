@@ -33,16 +33,16 @@ const FeatureCard = ({
       <img src={icon} alt="icon" className="w-[80%] h-[80%] object-contain" />
     </div>
     <div className="flex-1 flex flex-col ml-4">
-      <h4 className="font-poppins font-semibold text-white text-[20px] leading-[30px] mb-1 text-gradient">
+      <h4 className="font-poppins font-semibold text-white text-[20px] leading-[30px] mb-3 md:mb-1 text-gradient">
         {title}
       </h4>
-      <p className="font-poppins font-normal text-white text-[16px] leading-[30px] mb-1 ">
+      <p className="-ml-20 md:ml-0 font-poppins font-normal text-white text-[16px] leading-[30px] mb-1 ">
         {degree}
       </p>
-      <p className="font-poppins font-normal text-dimWhite text-[14px] leading-[30px] mb-1">
+      <p className="-ml-20 md:ml-0 font-poppins font-normal text-dimWhite text-[14px] leading-[30px] mb-1">
         {duration}
       </p>
-      <p className="font-poppins font-normal text-dimWhite text-[16px] leading-[30px] mb-1">   
+      <p className="-ml-20 md:ml-0 font-poppins font-normal text-dimWhite text-[16px] leading-[30px] mb-1">   
       ● {content1}
       </p>
       {content2 && (

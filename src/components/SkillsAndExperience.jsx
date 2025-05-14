@@ -27,7 +27,7 @@ const SkillCard = (props) => {
           {props.title}
         </h4>
       </div>
-      <div className="grid grid-cols-4 md:grid-cols-4 gap-8 ml-8">
+      <div className="grid grid-cols-3 md:grid-cols-4 gap-8 ml-8">
         {props.items.map((item, index) => (
           <SkillIcon key={item.id} index={index} {...item} />
         ))}
@@ -101,7 +101,7 @@ const ExperienceCard = (props) => {
 const SkillsAndExperience = () => {
   return (
     <section id="skills" className="mb-12">
-      <h1 className="flex-1 md:-mb-8 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
+      <h1 className="flex-1 md:-mb-10 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
         Work I've Done
       </h1>
       <div
@@ -109,17 +109,17 @@ const SkillsAndExperience = () => {
         // whileInView={{ y: [-20, 0], opacity: [0, 1] }}
         // transition={{ duration: 0.5 }}
       >
-        {/* Skills */}
-        <motion.div className={`ml-2 mb-6 md:-mt-20 ${layout.sectionInfo}`}>
-          {skills.map((skill, index) => (
-            <SkillCard key={index} index={index} {...skill} />
+        {/* Experience */}
+        <motion.div className="flex flex-1 md:mt-4 -ml-2 mr-2 items-center justify-start flex-col">
+          {experiences.map((exp, index) => (
+            <ExperienceCard key={index} index={index} {...exp} />
           ))}
         </motion.div>
 
-        {/* Experience */}
-        <motion.div className="flex flex-1 md:ml-10 items-center justify-start flex-col">
-          {experiences.map((exp, index) => (
-            <ExperienceCard key={index} index={index} {...exp} />
+        {/* Skills */}
+        <motion.div className={`mb-6 md:-mt-28 md:ml-10 ${layout.sectionInfo}`}>
+          {skills.map((skill, index) => (
+            <SkillCard key={index} index={index} {...skill} />
           ))}
         </motion.div>
       </div>

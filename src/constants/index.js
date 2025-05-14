@@ -312,7 +312,7 @@ export const skills = [
       {
         id: "f-3",
         icon: SiNvidia,
-        name: "CUDA/OpenMP",
+        name: "CUDA",
       },
       {
         id: "f-4",
@@ -322,7 +322,7 @@ export const skills = [
       {
         id: "f-5",
         icon: SiZeromq,
-        name: "ZeroMQ/PUN2",
+        name: "ZeroMQ",
       },
       {
         id: "f-6",
@@ -342,7 +342,7 @@ export const skills = [
       {
         id: "t-1",
         icon: SiUnity,
-        name: "Unity (URP/HDRP)",
+        name: "Unity\n(URP/HDRP)",
       },
       {
         id: "t-2",
@@ -357,7 +357,7 @@ export const skills = [
       { 
         id: "t-4",
         icon: SiUnrealengine,
-        name: "Unreal Engine(Custom Shaders)",
+        name: "Unreal Engine\n(custom shaders)",
       },
       {
         id: "t-5",
@@ -545,7 +545,7 @@ export const projects = [
   },
   {
     id: "project-4",
-    title: "CUDA Parellelized Fluid Simulation",
+    title: "CUDA-Fluid Simulation",
     github: "https://github.com/Praful-Joshi/CUDA-Parallelized-FluidSim",
     image: fluidSimGIF,
     content:
@@ -565,16 +565,6 @@ export const projects = [
         id: "icon-3",
         icon: SiNvidia,
         name: "CUDA"
-      },
-      {
-        id: "icon-4",
-        icon: FaCamera,
-        name: "RenderDoc"
-      },
-      {
-        id: "icon-5",
-        icon: SiNvidia,
-        name: "NSight"
       },
     ],
   },
@@ -629,7 +619,7 @@ export const educationList = [
     id: "education-2",
     icon: sppuLogo,
     title: "Savitribai Phule Pune University",
-    degree: "Bachelor of Engineering (Electronics and Telecommunication)",
+    degree: "Bachelor of Engineering\n(Electronics and Telecomm.)",
     duration: "August 2017 - May 2021",
     content1: "Coursework: System Programming, Data Structures & Algorithms, Machine Learning, Computer Networks",
   },

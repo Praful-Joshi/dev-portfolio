@@ -16,7 +16,7 @@ const Footer = () => (
           {aboutMe.name}
         </h2>
         <p
-          className={`font-poppins font-normal text-dimWhite text-[16px] leading-[30.8px] max-w-[470px] mt-2`}
+          className={`font-poppins -mr-4 md:mr-0 font-normal text-dimWhite text-[16px] leading-[30.8px] max-w-[470px] mt-2`}
         >
         {aboutMe.tagLine}
         </p>
@@ -49,7 +49,7 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="md:ml-auto mt-10 md:mt-0">
+      <div className="md:ml-auto mb-4 md:mt-0">
         <img
           src={profilePic}
           alt="Praful Joshi"
