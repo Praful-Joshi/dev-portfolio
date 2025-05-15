@@ -524,26 +524,6 @@ export const projects = [
     ],
   },
   {
-    id: "project-3",
-    title: "3D Battle Tanks",
-    github: "https://github.com/Praful-Joshi/3D-Battle-Tanks",
-    image: battleTanksGIF,
-    content:
-      "A 3D tank battle simulation game where players engage AI-controlled enemy tanks. Developed using Unity's Rigidbody physics and NavMesh pathfinding, with MVC design and object pooling for optimized performance. Features include dynamic shooting mechanics, health management, explosion effects, and modular service layers for scalability.",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiUnity,
-        name: "Unity"
-      },
-      {
-        id: "icon-2",
-        icon: SiCsharp,
-        name: "C#"
-      },
-    ],
-  },
-  {
     id: "project-4",
     title: "CUDA-Fluid Simulation",
     github: "https://github.com/Praful-Joshi/CUDA-Parallelized-FluidSim",
@@ -565,6 +545,26 @@ export const projects = [
         id: "icon-3",
         icon: SiNvidia,
         name: "CUDA"
+      },
+    ],
+  },
+  {
+    id: "project-3",
+    title: "3D Battle Tanks",
+    github: "https://github.com/Praful-Joshi/3D-Battle-Tanks",
+    image: battleTanksGIF,
+    content:
+      "A 3D tank battle simulation game where players engage AI-controlled enemy tanks. Developed using Unity's Rigidbody physics and NavMesh pathfinding, with MVC design and object pooling for optimized performance. Features include dynamic shooting mechanics, health management, explosion effects, and modular service layers for scalability.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiUnity,
+        name: "Unity"
+      },
+      {
+        id: "icon-2",
+        icon: SiCsharp,
+        name: "C#"
       },
     ],
   },
