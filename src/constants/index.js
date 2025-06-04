@@ -400,7 +400,15 @@ export const experiences = [
         duration: "Aug 2023 - Jan 2024",
         content: [
           {
-            text: "Developed and optimized a VR Driving Simulator in Unity3D for cognitive psychology research.",
+            text: "Engineered a Unity-based 3D VR driving simulator enabling real-time interaction and tracking for research participants.",
+            link: "",
+          },
+          {
+            text: "Developed an analytics dashboard using React, Flask, and PostgreSQL to visualize participant behavior.",
+            link: "",
+          },
+          {
+            text: "Implemented RESTful Web APIs to allow Unity to push real-time telemetry to the backend, improving data collection fidelity by 40%",
             link: "",
           },
           {
