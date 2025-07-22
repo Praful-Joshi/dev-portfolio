@@ -396,29 +396,13 @@ export const experiences = [
     link: "http://www.jfenglab.com/",
     positions: [
       {
-        title: "VR Game Developer",
+        title: "VR Developer",
         duration: "Aug 2023 - Jan 2024",
         content: [
           {
-            text: "Engineered a Unity-based 3D VR driving simulator enabling real-time interaction and tracking for research participants.",
+            text: "Worked on a VR simulation game for a psychology research, building full stack components including a user dashboard, backend server, and a Unity-based VR game.",
             link: "",
-          },
-          {
-            text: "Developed an analytics dashboard using React, Flask, and PostgreSQL to visualize participant behavior.",
-            link: "",
-          },
-          {
-            text: "Implemented RESTful Web APIs to allow Unity to push real-time telemetry to the backend, improving data collection fidelity by 40%",
-            link: "",
-          },
-          {
-            text: "Optimized performance by implementing object pooling, static batching, and baked lighting, resulting in a 37% increase in frame rate, from an average of 40 FPS to 55-60 FPS.",
-            link: "",
-          },
-                    {
-            text: "Built a highly optimized Physics engine to transition the driving mechanism from animation-based to physics-based, significantly improving the realism of the driving experience.",
-            link: "",
-          },
+          }
         ],
       },
     ],
@@ -429,19 +413,11 @@ export const experiences = [
     link: "https://www.mlympix.in/",
     positions: [
       {
-        title: "Lead Game Developer",
+        title: "Lead Developer",
         duration: "Mar 2022 - Jul 2023",
         content: [
           {
-            text: "Led the game team and developed a social-feed based real money gaming app using Unity & C#.",
-            link: ""
-          },
-          {
-            text: "Streamlined and optimized the codebase, resulting in a 20% improvement in overall performance and scalability. Restructured code to enhance scalability and maintainability.",
-            link: ""
-          },
-          {
-            text: "Built highly scalable game mechanics for multiple sports based games, implementing real-time multiplayer features using Photon Networking.",
+            text: "Led a 4-member team to develop a mobile gaming platform integrating real-time multiplayer sports games using Unity.",
             link: ""
           }
         ],
@@ -458,21 +434,9 @@ export const experiences = [
         duration: "Aug 2021 - Feb 2022",
         content: [
           {
-            text: "Developed and maintained backend services using .NET Framework and C# for enterprise client projects.",
+            text: "Developed microservices in .NET & C# and optimized SQL Server queries to enhance data processing for an enterprise finance client, reducing latency by 17%.",
             link: ""
-          },
-          {
-            text: "Designed and optimized SQL Server queries, stored procedures, and database schemas to improve data processing efficiency by 17%.",
-            link: ""
-          },
-          {
-            text: "Integrated RESTful APIs with existing systems, ensuring seamless communication between backend and front-end components.",
-            link: ""
-          },
-          {
-            text: "Participated in code reviews, unit testing, and bug-fixing activities as part of an Agile Scrum team.",
-            link: ""
-          },
+          }
         ],
       },
     ],
